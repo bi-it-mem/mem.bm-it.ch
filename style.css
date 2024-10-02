@@ -1,0 +1,219 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+h1, footer {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+h2, h3 {
+    padding-left: 1rem;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'SourceSans3';
+    src: url('./Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    max-width: 2110px;
+    min-width: 560px;
+    font-family: 'SourceSans3', sans-serif;
+    font-size: 1rem;
+    margin: auto;
+    hyphens: auto;
+}
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 0;
+    padding: 0;
+}
+
+.grid-item {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%; /* Bild auf 50% der Breite des übergeordneten Containers setzen */
+    height: auto; /* Proportionen des Bildes beibehalten */
+    display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
+    margin: 0 auto; /* Zentriert das Bild */
+}
+
+.site-header a {
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.site-header {
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+figure {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header p {
+    color: turquoise;
+    background-color: steelblue;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.site-header, h1 {
+    margin: 0;
+}
+
+.site-header p {
+    font-weight: 700;
+}
+
+.site-content h2, h3, h4 {
+    color: steelblue;
+    font-size: 80px;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+h3, h4 {
+    border-top: 0.5rem solid steelblue;
+    padding-top: 1rem;
+}
+
+.button-container {
+    display: flex;
+    align-items: stretch;
+    background-color: steelblue;
+}
+
+.text {
+    margin: 0;
+    padding: 0 10px 5px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    padding: 0 10px 5px 10px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: black;
+}
+
+main p {
+    margin: 0;
+    padding: 10px 0.5rem 100px 0.5rem;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.row {
+    display: grid;
+    gap: 30px;
+    justify-items: stretch;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content img {
+    width: 150px;
+    height: auto;
+}
+
+.content p {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+h5 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0.1rem 0.5rem;
+    border-top: 0.5rem solid steelblue;
+    border-bottom: 0.5rem solid steelblue;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.scroll-container {
+    overflow-x: auto; /* Horizontales Scrollen aktivieren */
+    overflow-y: hidden; /* Vertikales Scrollen verhindern */
+    white-space: nowrap; /* Verhindert Umbrüche */
+    height: auto; /* Feste Höhe für den Container */
+    width: 100%; /* Volle Breite des Containers */
+    border: 1px solid #ccc; /* Rahmen für die Scrollbox */
+    padding: 0; /* Abstand oben und unten entfernen */
+    box-sizing: border-box; /* Rahmen und Padding in der Breite berücksichtigen */
+}
+
+.image-grid2 {
+    display: inline-flex; /* Flexibles Layout für die Bilder */
+}
+
+.grid-item2 {
+    display: inline-block; /* Inline-Block für die Boxen */
+    width: 150px; /* Breite der Boxen */
+    height: 308px; /* Höhe der Boxen */
+    margin-right: 10px; /* Abstand zwischen den Boxen */
+    background-color: #f0f0f0; /* Hintergrundfarbe für die Boxen */
+    border: 2px solid steelblue; /* Rahmen hinzufügen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+    transition: transform 0.2s; /* Übergangseffekt für Hover */
+    margin: 50px 10px;
+}
+
+.grid-item2:hover {
+    transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
+}
+
+.grid-item2 img {
+    width: 100%; /* Breite des Bildes */
+    height: 100%; /* Höhe des Bildes */
+    object-fit: cover; /* Bildabdeckung */
+}

@@ -3,13 +3,21 @@ body {
     color: black;
 }
 
-h1, footer {
+h1 {
     background-color: steelblue;
     color: white;
     padding: 1rem;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    margin: 0;
+    position: fixed;
+    top: 0; /* Aligns it to the top of the viewport */
+    width: 100%; /* Make it take full width */
+    z-index: 10; /* Higher z-index to ensure it stays on top */
 }
-
+h2 {
+    padding-top: 6rem;
+    margin-top: 2rem;
+}
 h2, h3 {
     padding-left: 1rem;
     margin: 0;
@@ -40,6 +48,12 @@ body {
     text-decoration: none;
 }
 
+.fav-image {
+    display: flex; 
+    flex-direction: row; 
+}
+    
+
 .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -54,7 +68,7 @@ body {
 }
 
 img {
-    width: 100%; /* Bild auf 50% der Breite des übergeordneten Containers setzen */
+    width: 100%;
     height: auto; /* Proportionen des Bildes beibehalten */
     display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
     margin: 0 auto; /* Zentriert das Bild */
@@ -84,11 +98,7 @@ figure {
     margin: 0;
 }
 
-.site-header p {
-    font-weight: 700;
-}
-
-.site-content h2, h3, h4 {
+h2, h3, h4 {
     color: steelblue;
     font-size: 80px;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
@@ -99,10 +109,17 @@ h3, h4 {
     padding-top: 1rem;
 }
 
+.container {
+    padding-top: 2rem; /* Platz für den fixierten Header */
+}
+
 .button-container {
     display: flex;
     align-items: stretch;
     background-color: steelblue;
+    position: fixed;
+    top: 78px; /* Adjust this to sit below the h1 */
+    width: 100%; /* Full width as well */
 }
 
 .text {

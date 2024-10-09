@@ -235,3 +235,9 @@ h5 {
     height: 100%; /* Höhe des Bildes */
     object-fit: cover; /* Bildabdeckung */
 }
+
+.inverted {
+    background-color: black; /* Beispiel für eine invertierte Hintergrundfarbe */
+    filter: invert(1);
+    color: white; /* Setze die Textfarbe auf weiß für bessere Lesbarkeit */
+}

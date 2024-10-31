@@ -1,151 +1,189 @@
 <!DOCTYPE html>
 <html lang="de" id="top">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>https://mem.bm-it.ch</title>
+        <meta name="description" content="Das war eine Webseite die ich während meiner Ausbildung gemacht habe. Diese Webseite wurde mit HTML5 und CSS3 am 12.02.24 gemacht.">
 
-    <title>https://mem.bm-it.ch</title>
-    <meta name="description"
-        content="Das war eine Webseite die ich während meiner Ausbildung gemacht habe. Diese Webseite wurde mit HTML5 und CSS3 am 12.02.24 gemacht.">
+        <link rel="stylesheet" href="/style.css">
+        <script src="/javascript/AgeUpdater.js" defer></script>
+    </head>
 
-    <link rel="stylesheet" href="./style.css">
-    <script src="./AgeUpdater.js" defer></script>
-</head>
+    <body>
+        <!-- Navigationsleiste -->
+        <header class="site-header">
+            <h1>Webseite eines Lehrlings</h1>
+            <nav class="button-container">
+                <p class="text">Willkommen in meiner Webseite</p>
+                <a href="#top" class="link">Hilfe wieder rauf zu kommen?</a>
+                <a href="#über_mich" class="link">Über mich</a>
+                <a href="#projekte" class="link">Projekte Galerie</a>
+                <a href="#privacy" class="link">Datenschutz</a>
+            </nav>
+        </header>
 
-<body>
-    <header class="site-header">
-        <h1>Webseite eines Lehrlings</h1>
-        <div class="button-container">
-            <p class="text">Willkommen in meiner Webseite</p>
-            <a href="#top" class="link">Hilfe wieder rauf zu kommen?</a>
-            <a href="#über_mich" class="link">Über mich</a>
-            <a href="#projekte" class="link">Projekte Bibliothek</a>
-            <a href="#privacy" class="link">Datenschutz</a>
-        </div>
-    </header>
+        <figure>
+            <!-- Header Bilder -->
+            <div class="image-grid">
+                <a href="https://www.metacritic.com/game/mario-kart-8-deluxe/" class="grid-item">
+                    <img src="/fav-games/Mario_kart_8-kopie.jpg" alt="Mario Kart 8 Deluxe">
+                </a>
+                <a href="https://www.metacritic.com/game/minecraft/" class="grid-item">
+                    <img src="/fav-games/Minecraft-kopie.jpg" alt="Minecraft">
+                </a>
+                <a href="https://www.metacritic.com/game/the-legend-of-zelda-breath-of-the-wild/" class="grid-item">
+                    <img src="/fav-games/The-Legend-of-Zelda-Breath-of-the-Wild-kopie.jpg" alt="The Legend of Zelda: Breath of the Wild">
+                </a>
+                <a href="https://www.metacritic.com/game/hollow-knight/" class="grid-item">
+                    <img src="/fav-games/hollowknight-kopie.jpg" alt="Hollow Knight für Switch">
+                </a>
+            </div>
+        </figure>
 
-    <figure>
-        <div class="image-grid">
 
-            <!-- <div class="grid-item"><img src="./Mario_kart_8-kopie.jpg" alt="Mario Kart 8 Deluxe"></div>
-                <div class="grid-item"><img src="./Minecraft-kopie.jpg" alt="Minecraft"></div>
-                <div class="grid-item"><img src="./The-Legend-of-Zelda-Breath-of-the-Wild-kopie.jpg" alt="The legend of Zelda: Breath of the Wild"></div>
-                <div class="grid-item"><img src="./hollowknight-kopie.jpg" alt="Hollow Knight für Switch"></div> -->
-        </div>
-    </figure>
+        <main class="site-content">
+            <h2>Home</h2>
+            <p>Diese Page dient dazu mich kennenzulernen, Hiermit werde ich mich vorstellen. Werde ein bisschen über mich erzählen, meine Hobbies vorstellen und was ich gerade aktuell mache.</p>
+        </main>
+        <main>
+            <!-- Trennungslinie -->
+            <hr>
+            <!-- Einführungstext -->
+            <h3 id="über_mich">Über mich</h3>
+            <p>Hi! Mein Name ist Martim und ich bin <span id="age">18</span> Jahre alt. Ich habe von Geburt an Spina bifida
+                aperta, kann aber laufen. Wegen der Spina bifida habe ich Hydrocephalus, habe ich Stehschwierigkeiten. Ich
+                habe auch ein Rohlstuhl für längere Laufzeiten und für den Transport schwerer Gewichte. Dazu muss ich auch
+                noch Katheterisieren. Ich mag Anime und Videospiele sehr. Besonders gerne spiele ich Fantasy-Titel, vor
+                allem Rollenspiele und Strategiespiele. Ausserdem interessiere ich mich sehr für Hollow Knight und Minecraft.</p>
+        </main>
+        <main>
+            <!-- Lieblings-Spiele bilder -->
+            <article class="fav-games">
+                <article class="content image-left">
+                  <img src="image1.jpg" alt="Mario Kart 8 Deluxe">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </article>
+                <article class="content image-right">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <img src="image2.jpg" alt="Minecraft">
+                </article>
+                <article class="content image-left">
+                  <img src="image3.jpg" alt="The legend of Zelda: Breath of the Wild">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </article>
+                <article class="content image-right">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                  <img src="image4.jpg" alt="Hollow Knight für Switch">
+                </article>
+            </article>
+        </main>
+        <main>
+            <!--Trennungslinie-->
+            <hr>
+            <!-- Projekte bibliothek felder -->
+            <h4 id="projekte">Projekte bibliothek</h4>
+            <h5>Aktuelle Projekte</h5>
+            <div class="scroll-container">
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 1"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 2"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 3"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 4"></a>
+                </div>
+                <!-------------------------Platzhalter------------------------------->
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 5"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 6"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 7"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 8"></a>
+                </div> 
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 9"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 10"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 11"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 12"></a>
+                </div> 
+            </div>
 
-    <main class="container">
-        <h2>Home</h2>
-        <p>Diese Page dient dazu mich kennenzulernen, Hiermit werde ich mich vorstellen. Werde ein bisschen über mich
-            erzählen, meine Hobbies vorstellen und was ich gerade aktuell mache.</p>
-    </main>
-    <main>
-        <h3 id="über_mich">Über mich</h3>
-        <p>Hi! Mein Name ist Martim und ich bin <span id="age">18</span> Jahre alt. Ich habe von Geburt an Spina bifida
-            aperta, kann aber laufen. Wegen der Spina bifida habe ich Hydrocephalus, habe ich Stehschwierigkeiten. Ich
-            habe auch ein Rohlstuhl für längere Laufzeiten und für den Transport schwerer Gewichte. Dazu muss ich auch
-            noch Katheterisieren. Ich mag Anime und Videospiele sehr. Besonders gerne spiele ich Fantasy-Titel, vor
-            allem Rollenspiele und Strategiespiele. Ausserdem interessiere ich mich sehr für Hollow Knight und Minecraft.
-        </p>
-    </main>
-    <main>
-        <div>
-            <div class="fav-image">
-                <img src="image1.jpg" alt="Mario Kart 8 Deluxe">
-                <img src="image2.jpg" alt="Minecraft">
-                <img src="image3.jpg" alt="The legend of Zelda: Breath of the Wild">
-                <img src="image4.jpg" alt="Hollow Knight für Switch">
+            <h5>Abgeschlossene Projekte</h5>
+            <div class="scroll-container">
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 1"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 2"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 3"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 4"></a>
+                </div>
+                <!-------------------------Platzhalter------------------------------->
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 5"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 6"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 7"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 8"></a>
+                </div> 
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 9"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 10"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 11"></a>
+                </div>
+                <div class="grid-item2">
+                    <a href="https://example.com"><img src="/fav-games/platzhalter.png" alt="Bild 12"></a>
+                </div> 
             </div>
-        </div>
-    </main>
-    <main>
-        <h4 id="projekte">Projekte Bibliothek</h4>
-        <h5>Aktuelle Projekte</h5>
-        <div class="scroll-container">
-            <div class="grid-item2">
-                <a href="seite1.html"><img src="bild1.jpg" alt="Bild 1"></a>
+        </main>
+        <footer>
+            <div id="responseMessage" style="display: none; color: rgb(173, 165, 165); background: rgb(61, 13, 16); padding: 10px; margin: 10px 0;">
+                <p>Erfolgreich gesendet</p>
             </div>
-            <div class="grid-item2">
-                <a href="seite2.html"><img src="bild2.jpg" alt="Bild 2"></a>
+            <div class="contactFormContainer">
+                <form class="contactForm" id="contactForm" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+                   
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                   
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                   
+                    <input type="submit" value="Send Message">
+                </form>
             </div>
-            <div class="grid-item2">
-                <a href="seite3.html"><img src="bild3.jpg" alt="Bild 3"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite4.html"><img src="bild4.jpg" alt="Bild 4"></a>
-            </div>
-            <!-------------------------fakes------------------------------->
-            <div class="grid-item2">
-                <a href="seite5.html"><img src="bild5.jpg" alt="Bild 5"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite6.html"><img src="bild6.jpg" alt="Bild 6"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite7.html"><img src="bild7.jpg" alt="Bild 7"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite8.html"><img src="bild8.jpg" alt="Bild 8"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite9.html"><img src="bild9.jpg" alt="Bild 9"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite10.html"><img src="bild10.jpg" alt="Bild 10"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite11.html"><img src="bild11.jpg" alt="Bild 11"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite12.html"><img src="bild12.jpg" alt="Bild 12"></a>
-            </div>
-        </div>
-
-        <h5>Abgeschlossene Projekte</h5>
-        <div class="scroll-container">
-            <div class="grid-item2">
-                <a href="seite1.html"><img src="bild1.jpg" alt="Bild 1"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite2.html"><img src="bild2.jpg" alt="Bild 2"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite3.html"><img src="bild3.jpg" alt="Bild 3"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite4.html"><img src="bild4.jpg" alt="Bild 4"></a>
-            </div>
-            <!-------------------------fakes------------------------------->
-            <div class="grid-item2">
-                <a href="seite5.html"><img src="bild5.jpg" alt="Bild 5"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite6.html"><img src="bild6.jpg" alt="Bild 6"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite7.html"><img src="bild7.jpg" alt="Bild 7"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite8.html"><img src="bild8.jpg" alt="Bild 8"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite9.html"><img src="bild9.jpg" alt="Bild 9"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite10.html"><img src="bild10.jpg" alt="Bild 10"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite11.html"><img src="bild11.jpg" alt="Bild 11"></a>
-            </div>
-            <div class="grid-item2">
-                <a href="seite12.html"><img src="bild12.jpg" alt="Bild 12"></a>
-            </div>
-        </div>
-
-        <footer class="site-footer">
-
         </footer>
-</body>
-
+    </body>
 </html>

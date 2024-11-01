@@ -1,4 +1,3 @@
-<<<<<<<< HEAD:Hauptpage/style.css
 body {
     background-color: white;
     color: black;
@@ -23,30 +22,26 @@ h2, h3 {
     margin: 0;
 }
 
-========
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 html {
     scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: 'SourceSans3';
-<<<<<<<< HEAD:Hauptpage/style.css
     src: url('./Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-========
     src: url('/Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     background-color: white;
     color: black;
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
     max-width: 2110px;
     min-width: 560px;
     font-family: 'SourceSans3', sans-serif;
@@ -54,7 +49,6 @@ body {
     margin: auto;
     hyphens: auto;
 }
-<<<<<<<< HEAD:Hauptpage/style.css
 
 .site-header a {
     color: white;
@@ -128,25 +122,22 @@ h3, h4 {
     padding-top: 2rem; /* Platz für den fixierten Header */
 }
 
-========
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .button-container {
     display: flex;
     align-items: stretch;
     background-color: steelblue;
-<<<<<<<< HEAD:Hauptpage/style.css
     position: fixed;
     top: 78px; /* Adjust this to sit below the h1 */
     width: 100%; /* Full width as well */
 }
 
-========
-    position: fixed !important;
+.button-container{
+    position: fixed;
     width: 100%; /* Full width as well */
     z-index: 1;
     margin-top: 78px;
 }
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
+
 .text {
     margin: 0;
     padding: 0 10px 5px 15px;
@@ -154,10 +145,7 @@ h3, h4 {
     display: flex;
     align-items: center;
 }
-<<<<<<<< HEAD:Hauptpage/style.css
 
-========
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .link {
     padding: 0 10px 5px 10px;
     text-decoration: none;
@@ -165,10 +153,7 @@ h3, h4 {
     display: flex;
     align-items: center;
 }
-<<<<<<<< HEAD:Hauptpage/style.css
 
-========
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .link::before {
     content: "";
     position: absolute;
@@ -179,7 +164,6 @@ h3, h4 {
     background-color: black;
 }
 
-<<<<<<<< HEAD:Hauptpage/style.css
 main p {
     margin: 0;
     padding: 10px 0.5rem 100px 0.5rem;
@@ -195,8 +179,6 @@ main p {
     white-space: nowrap;
 }
 
-.row {
-========
 .site-header a {
     color: white;
     text-decoration: none;
@@ -239,13 +221,11 @@ img {
 }
 
 .fav-games {
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
     display: grid;
     gap: 30px;
     justify-items: stretch;
 }
 
-<<<<<<<< HEAD:Hauptpage/style.css
 .content {
     display: flex;
     align-items: flex-start;
@@ -265,7 +245,6 @@ img {
     text-align: left;
 }
 
-========
 main p {
     margin: 0;
     padding: 10px 1rem 100px 1rem;
@@ -295,7 +274,7 @@ h2, h3, h4 {
     margin: 0;
     padding-bottom: 80px;
 }
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
+
 h5 {
     margin: 0;
     font-size: 1.5rem;
@@ -343,12 +322,6 @@ h5 {
     object-fit: cover; /* Bildabdeckung */
 }
 
-
-<<<<<<<< HEAD:Hauptpage/style.css
-/*
-test
-*/
-========
 hr {
     border-top: 0.5rem solid steelblue;
     margin-bottom: 1rem;
@@ -422,4 +395,3 @@ hr {
         z-index: 10;
     }
 }
->>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css

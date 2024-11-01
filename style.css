@@ -1,40 +1,9 @@
-
-body {
-    background-color: white;
-    color: black;
-}
-
-h1 {
-    background-color: steelblue;
-    color: white;
-    padding: 1rem;
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-    margin: 0;
-    position: fixed;
-    top: 0; /* Aligns it to the top of the viewport */
-    width: 100%; /* Make it take full width */
-}
-h2 {
-    padding-top: 6rem;
-    margin-top: 2rem;
-}
-h2, h3 {
-    padding-left: 1rem;
-    margin: 0;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: 'SourceSans3';
-    src: url('./Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
     src: url('/Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -49,89 +18,11 @@ body {
     margin: auto;
     hyphens: auto;
 }
-
-.site-header a {
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.fav-image {
-    display: flex; 
-    flex-direction: row; 
-}
-    
-
-.image-grid {
-    display: grid;
-    display: block;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 0;
-    padding: 0;
-}
-
-.grid-item {
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    width: 100%;
-    height: auto; /* Proportionen des Bildes beibehalten */
-    display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
-    margin: 0 auto; /* Zentriert das Bild */
-}
-
-.site-header a {
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-}
-
-.site-header {
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-}
-
-figure {
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-
-.site-header p {
-    color: turquoise;
-    background-color: steelblue;
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-}
-
-.site-header, h1 {
-    margin: 0;
-}
-
-h2, h3, h4 {
-    color: steelblue;
-    font-size: 80px;
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-}
-
-h3, h4 {
-    border-top: 0.5rem solid steelblue;
-    padding-top: 1rem;
-}
-
-.container {
-    padding-top: 2rem; /* Platz für den fixierten Header */
-}
-
 .button-container {
     display: flex;
     align-items: stretch;
     background-color: steelblue;
-    position: fixed;
-    top: 78px; /* Adjust this to sit below the h1 */
-    width: 100%; /* Full width as well */
-}
-.button-container{
-    position: fixed;
+    position: fixed !important;
     width: 100%; /* Full width as well */
     z-index: 1;
     margin-top: 78px;
@@ -143,7 +34,6 @@ h3, h4 {
     display: flex;
     align-items: center;
 }
-
 .link {
     padding: 0 10px 5px 10px;
     text-decoration: none;
@@ -151,7 +41,6 @@ h3, h4 {
     display: flex;
     align-items: center;
 }
-
 .link::before {
     content: "";
     position: absolute;
@@ -160,21 +49,6 @@ h3, h4 {
     bottom: 0;
     width: 1px;
     background-color: black;
-}
-
-main p {
-    margin: 0;
-    padding: 10px 0.5rem 100px 0.5rem;
-}
-
-.container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.word {
-    display: inline-block;
-    white-space: nowrap;
 }
 
 .site-header a {
@@ -206,46 +80,30 @@ figure {
     z-index: 10;
 }
 
+/* Darstellungseintellung der Header Bilder */
 .grid-item {
     padding: 0; /* Entfernt das Padding */
     margin: 0; /* Entfernt das Margin */
 }
+/* Darstellungseintellung der Header Bilder, Lieblings-Spiele bilder und Projekte blöcke */
 img {
     width: 100%; /* Bilder nehmen 100% der Breite der Grid-Items ein */
     height: auto; /* Proportionen des Bildes beibehalten */
     display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
     margin: 0 auto; /* Zentriert das Bild */
 }
-
+/* Darstellungseintellung der Lieblings-Spiele bilder */
 .fav-games {
     display: grid;
     gap: 30px;
     justify-items: stretch;
 }
-
-.content {
-    display: flex;
-    align-items: flex-start;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.content img {
-    width: 150px;
-    height: auto;
-}
-
-.content p {
-    flex: 1;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: left;
-}
-
+/* Normaler text in den mains */
 main p {
     margin: 0;
     padding: 10px 1rem 100px 1rem;
 }
+/* Darstellungseintellung nur des Seitentitels */
 h1 {
     background-color: steelblue;
     color: white;
@@ -258,12 +116,15 @@ h1 {
     z-index: 10; /* Higher z-index to ensure it stays on top */
     text-wrap: nowrap;
 }
+/* oberer Abstand der Überschrift "Home" */
 h2 {
     padding-top: 1rem;
 }
+/* Linker Abstand der Überschrift "Home" und "Über mich" */
 h2, h3 {
     padding-left: 1rem;
 }
+/* Darstellungseintellung der Überschrift "Home" und "Über mich" und Projekte bibliothek*/
 h2, h3, h4 {
     color: steelblue;
     font-size: 80px;
@@ -271,7 +132,7 @@ h2, h3, h4 {
     margin: 0;
     padding-bottom: 80px;
 }
-
+/* oberer Abstand der Überschrift "Home" */
 h5 {
     margin: 0;
     font-size: 1.5rem;
@@ -280,31 +141,27 @@ h5 {
     border-bottom: 0.5rem solid steelblue;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
 }
-
+/* Darstellungseintellung des projekte-boxen container */
 .scroll-container {
     overflow-x: auto; /* Horizontales Scrollen aktivieren */
     overflow-y: hidden; /* Vertikales Scrollen verhindern */
     white-space: nowrap; /* Verhindert Umbrüche */
-    height: auto; /* Feste Höhe für den Container */
+    height: auto; 
     width: 100%; /* Volle Breite des Containers */
     border: 1px solid #ccc; /* Rahmen für die Scrollbox */
     padding: 0; /* Abstand oben und unten entfernen */
-    box-sizing: border-box; /* Rahmen und Padding in der Breite berücksichtigen */
+    box-sizing: border-box; /* Rahmen und Padding in der Breite einbeziehen  */
 }
-
-.image-grid2 {
-    display: inline-flex; /* Flexibles Layout für die Bilder */
-}
-
+/* Darstellungseintellung des projekte-boxen */
 .grid-item2 {
     display: inline-block; /* Inline-Block für die Boxen */
-    width: 150px; /* Breite der Boxen */
-    height: 308px; /* Höhe der Boxen */
-    margin-right: 10px; /* Abstand zwischen den Boxen */
-    background-color: #f0f0f0; /* Hintergrundfarbe für die Boxen */
-    border: 2px solid steelblue; /* Rahmen hinzufügen */
-    border-radius: 5px; /* Abgerundete Ecken */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
+    width: 150px; 
+    height: 308px; 
+    margin-right: 10px; 
+    background-color: #f0f0f0;
+    border: 2px solid steelblue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s; /* Übergangseffekt für Hover */
     margin: 50px 10px;
 }
@@ -312,18 +169,14 @@ h5 {
 .grid-item2:hover {
     transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
 }
-
+/* Darstellungseintellung des projekte-boxen bilder*/
 .grid-item2 img {
-    width: 100%; /* Breite des Bildes */
-    height: 100%; /* Höhe des Bildes */
+    width: 100%;
+    height: 100%;
     object-fit: cover; /* Bildabdeckung */
 }
 
-
-/*
-test
-*/
-
+/* Darstellungseintellung der Trennungslinie */
 hr {
     border-top: 0.5rem solid steelblue;
     margin-bottom: 1rem;
@@ -345,6 +198,7 @@ hr {
     padding: 10px;
     box-sizing: border-box;
 }
+
 .content img {
     width: 150px;
     height: auto;
@@ -356,7 +210,7 @@ hr {
     font-size: 1rem;
     text-align: left;
 }
-
+/* Verschiedene Aufsungen */
 @media screen and (max-width: 843px) and (orientation: portrait) {
     .image-grid {
         display: grid;
@@ -366,8 +220,8 @@ hr {
         padding-top: 127px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-}
-@media screen and (max-width: 843px) and (orientation: landscape) {
+  }
+  @media screen and (max-width: 843px) and (orientation: landscape) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -376,8 +230,8 @@ hr {
         padding-top: 127px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-}
-@media screen and (max-width: 130px) and (orientation: portrait) {
+  }
+  @media screen and (max-width: 130px) and (orientation: portrait) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -386,7 +240,7 @@ hr {
         padding-top: 149px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-}
+  }
   @media screen and (max-width: 130px) and (orientation: landscape) {
     .image-grid {
         display: grid;
@@ -396,4 +250,26 @@ hr {
         padding-top: 149px; /* Platz für den fixierten Header */
         z-index: 10;
     }
+  }
+
+  #responseMessage {
+    display: none; /* Initially hidden */
+    color: #491b1b; /* Text color */
+    background-color: rgb(63, 22, 26); /* Background color */
+    padding: 15px; /* Padding for space */
+    margin: 10px 0; /* Margin for spacing */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Positioning */
+    transition: opacity 0.5s; /* Fade in/out effect */
+    opacity: 1; /* Standard Translucency */
 }
+ 
+#responseMessage.hidden {
+    opacity: 0; /* The Message has been sent dissapearing */
+}
+ 
+.contactForm{
+    background-color: #000; /* colour stuff for writing me a email */
+    color: #3b1515;
+}
+ 

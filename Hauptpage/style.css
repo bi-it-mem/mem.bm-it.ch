@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:Hauptpage/style.css
 body {
     background-color: white;
     color: black;
@@ -22,18 +23,30 @@ h2, h3 {
     margin: 0;
 }
 
+========
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 html {
     scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: 'SourceSans3';
+<<<<<<<< HEAD:Hauptpage/style.css
     src: url('./Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
+========
+    src: url('/Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: white;
+    color: black;
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
     max-width: 2110px;
     min-width: 560px;
     font-family: 'SourceSans3', sans-serif;
@@ -41,6 +54,7 @@ body {
     margin: auto;
     hyphens: auto;
 }
+<<<<<<<< HEAD:Hauptpage/style.css
 
 .site-header a {
     color: white;
@@ -114,15 +128,25 @@ h3, h4 {
     padding-top: 2rem; /* Platz für den fixierten Header */
 }
 
+========
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .button-container {
     display: flex;
     align-items: stretch;
     background-color: steelblue;
+<<<<<<<< HEAD:Hauptpage/style.css
     position: fixed;
     top: 78px; /* Adjust this to sit below the h1 */
     width: 100%; /* Full width as well */
 }
 
+========
+    position: fixed !important;
+    width: 100%; /* Full width as well */
+    z-index: 1;
+    margin-top: 78px;
+}
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .text {
     margin: 0;
     padding: 0 10px 5px 15px;
@@ -130,7 +154,10 @@ h3, h4 {
     display: flex;
     align-items: center;
 }
+<<<<<<<< HEAD:Hauptpage/style.css
 
+========
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .link {
     padding: 0 10px 5px 10px;
     text-decoration: none;
@@ -138,7 +165,10 @@ h3, h4 {
     display: flex;
     align-items: center;
 }
+<<<<<<<< HEAD:Hauptpage/style.css
 
+========
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 .link::before {
     content: "";
     position: absolute;
@@ -149,6 +179,7 @@ h3, h4 {
     background-color: black;
 }
 
+<<<<<<<< HEAD:Hauptpage/style.css
 main p {
     margin: 0;
     padding: 10px 0.5rem 100px 0.5rem;
@@ -165,11 +196,56 @@ main p {
 }
 
 .row {
+========
+.site-header a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+.site-header p {
+    color: turquoise;
+    background-color: steelblue;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.site-header p {
+    font-weight: 700;
+}
+
+figure {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+    gap: 0; /* Kein Abstand zwischen den Bildern */
+    padding-top: 105px; /* Platz für den fixierten Header */
+    z-index: 10;
+}
+
+
+.grid-item {
+    padding: 0; /* Entfernt das Padding */
+    margin: 0; /* Entfernt das Margin */
+}
+img {
+    width: 100%; /* Bilder nehmen 100% der Breite der Grid-Items ein */
+    height: auto; /* Proportionen des Bildes beibehalten */
+    display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
+    margin: 0 auto; /* Zentriert das Bild */
+}
+
+.fav-games {
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
     display: grid;
     gap: 30px;
     justify-items: stretch;
 }
 
+<<<<<<<< HEAD:Hauptpage/style.css
 .content {
     display: flex;
     align-items: flex-start;
@@ -189,6 +265,37 @@ main p {
     text-align: left;
 }
 
+========
+main p {
+    margin: 0;
+    padding: 10px 1rem 100px 1rem;
+}
+h1 {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    margin: 0;
+    position: fixed;
+    top: 0; /* Aligns it to the top of the viewport */
+    width: 100%; /* Make it take full width */
+    z-index: 10; /* Higher z-index to ensure it stays on top */
+    text-wrap: nowrap;
+}
+h2 {
+    padding-top: 1rem;
+}
+h2, h3 {
+    padding-left: 1rem;
+}
+h2, h3, h4 {
+    color: steelblue;
+    font-size: 80px;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    margin: 0;
+    padding-bottom: 80px;
+}
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css
 h5 {
     margin: 0;
     font-size: 1.5rem;
@@ -237,6 +344,82 @@ h5 {
 }
 
 
+<<<<<<<< HEAD:Hauptpage/style.css
 /*
 test
 */
+========
+hr {
+    border-top: 0.5rem solid steelblue;
+    margin-bottom: 1rem;
+    margin-top: 80px;
+}
+
+.container {
+    padding-top: 2rem; /* Platz für den fixierten Header */
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.content img {
+    width: 150px;
+    height: auto;
+}
+
+.content p {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+@media screen and (max-width: 843px) and (orientation: portrait) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 127px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+}
+@media screen and (max-width: 843px) and (orientation: landscape) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 127px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+}
+@media screen and (max-width: 130px) and (orientation: portrait) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 149px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+}
+  @media screen and (max-width: 130px) and (orientation: landscape) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 149px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+}
+>>>>>>>> 5b89f4be096b9123c1511b403b1d363c230c0c6e:Mich/style.css

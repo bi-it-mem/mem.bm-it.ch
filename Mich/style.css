@@ -1,14 +1,44 @@
+
+body {
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    margin: 0;
+    position: fixed;
+    top: 0; /* Aligns it to the top of the viewport */
+    width: 100%; /* Make it take full width */
+}
+h2 {
+    padding-top: 6rem;
+    margin-top: 2rem;
+}
+h2, h3 {
+    padding-left: 1rem;
+    margin: 0;
+}
+
 html {
     scroll-behavior: smooth;
 }
-/* Darstellungseintellung für Font */
+
 @font-face {
     font-family: 'SourceSans3';
+    src: url('./Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
     src: url('/Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-/* Darstellungseintellung Des Bodys */
 body {
     background-color: white;
     color: black;
@@ -19,17 +49,93 @@ body {
     margin: auto;
     hyphens: auto;
 }
-/* Darstellungseintellung der Header Tasten box */
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.fav-image {
+    display: flex; 
+    flex-direction: row; 
+}
+    
+
+.image-grid {
+    display: grid;
+    display: block;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 0;
+    padding: 0;
+}
+
+.grid-item {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto; /* Proportionen des Bildes beibehalten */
+    display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
+    margin: 0 auto; /* Zentriert das Bild */
+}
+
+.site-header a {
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.site-header {
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+figure {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header p {
+    color: turquoise;
+    background-color: steelblue;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.site-header, h1 {
+    margin: 0;
+}
+
+h2, h3, h4 {
+    color: steelblue;
+    font-size: 80px;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+h3, h4 {
+    border-top: 0.5rem solid steelblue;
+    padding-top: 1rem;
+}
+
+.container {
+    padding-top: 2rem; /* Platz für den fixierten Header */
+}
+
 .button-container {
     display: flex;
     align-items: stretch;
     background-color: steelblue;
     position: fixed;
-    width: 100%;
+    top: 78px; /* Adjust this to sit below the h1 */
+    width: 100%; /* Full width as well */
+}
+.button-container{
+    position: fixed;
+    width: 100%; /* Full width as well */
     z-index: 1;
     margin-top: 78px;
 }
-/* Darstellungseintellung des Header Texts */
 .text {
     margin: 0;
     padding: 0 10px 5px 15px;
@@ -37,7 +143,7 @@ body {
     display: flex;
     align-items: center;
 }
-/* Darstellungseintellung der Header links */
+
 .link {
     padding: 0 10px 5px 10px;
     text-decoration: none;
@@ -45,7 +151,7 @@ body {
     display: flex;
     align-items: center;
 }
-/* Darstellungseintellung der Header link::befores */
+
 .link::before {
     content: "";
     position: absolute;
@@ -55,17 +161,34 @@ body {
     width: 1px;
     background-color: black;
 }
-/* Darstellungseintellung der Header a Elemente */
+
+main p {
+    margin: 0;
+    padding: 10px 0.5rem 100px 0.5rem;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .site-header a {
     color: white;
     text-decoration: none;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
 }
-/* Darstellungseintellung der Header p Elemente */
 .site-header p {
     color: turquoise;
     background-color: steelblue;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.site-header p {
     font-weight: 700;
 }
 
@@ -77,36 +200,52 @@ figure {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-    gap: 0;
-    padding-top: 105px;
+    grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+    gap: 0; /* Kein Abstand zwischen den Bildern */
+    padding-top: 105px; /* Platz für den fixierten Header */
     z-index: 10;
 }
 
-/* Darstellungseintellung der Header Bilder */
 .grid-item {
-    padding: 0;
-    margin: 0;
+    padding: 0; /* Entfernt das Padding */
+    margin: 0; /* Entfernt das Margin */
 }
-/* Darstellungseintellung der Header Bilder, Lieblings-Spiele bilder und Projekte blöcke */
 img {
     width: 100%; /* Bilder nehmen 100% der Breite der Grid-Items ein */
     height: auto; /* Proportionen des Bildes beibehalten */
     display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
     margin: 0 auto; /* Zentriert das Bild */
 }
-/* Darstellungseintellung der Lieblings-Spiele bilder */
+
 .fav-games {
     display: grid;
     gap: 30px;
     justify-items: stretch;
 }
-/* Darstellungseintellung der header p Element */
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content img {
+    width: 150px;
+    height: auto;
+}
+
+.content p {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+
 main p {
     margin: 0;
     padding: 10px 1rem 100px 1rem;
 }
-/* Darstellungseintellung nur des Seitentitels */
 h1 {
     background-color: steelblue;
     color: white;
@@ -114,20 +253,17 @@ h1 {
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
     margin: 0;
     position: fixed;
-    top: 0; 
-    width: 100%;
-    z-index: 10; /* Höherer z-Index, um sicherzustellen, dass es oben bleibt */
+    top: 0; /* Aligns it to the top of the viewport */
+    width: 100%; /* Make it take full width */
+    z-index: 10; /* Higher z-index to ensure it stays on top */
     text-wrap: nowrap;
 }
-/* oberer Abstand der Überschrift "Home" */
 h2 {
     padding-top: 1rem;
 }
-/* Linker Abstand der Überschrift "Home" und "Über mich" */
 h2, h3 {
     padding-left: 1rem;
 }
-/* Darstellungseintellung der Überschrift "Home" und "Über mich" und Projekte bibliothek*/
 h2, h3, h4 {
     color: steelblue;
     font-size: 80px;
@@ -135,7 +271,7 @@ h2, h3, h4 {
     margin: 0;
     padding-bottom: 80px;
 }
-/* oberer Abstand der Überschrift "Home" */
+
 h5 {
     margin: 0;
     font-size: 1.5rem;
@@ -144,73 +280,83 @@ h5 {
     border-bottom: 0.5rem solid steelblue;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
 }
-/* Darstellungseintellung des projekte-boxen container */
+
 .scroll-container {
     overflow-x: auto; /* Horizontales Scrollen aktivieren */
     overflow-y: hidden; /* Vertikales Scrollen verhindern */
     white-space: nowrap; /* Verhindert Umbrüche */
-    height: auto; 
-    width: 100%; 
+    height: auto; /* Feste Höhe für den Container */
+    width: 100%; /* Volle Breite des Containers */
     border: 1px solid #ccc; /* Rahmen für die Scrollbox */
-    padding: 0; 
-    box-sizing: border-box; /* Rahmen und Padding in der Breite einbeziehen  */
+    padding: 0; /* Abstand oben und unten entfernen */
+    box-sizing: border-box; /* Rahmen und Padding in der Breite berücksichtigen */
 }
-/* Darstellungseintellung des projekte-boxen */
+
+.image-grid2 {
+    display: inline-flex; /* Flexibles Layout für die Bilder */
+}
+
 .grid-item2 {
     display: inline-block; /* Inline-Block für die Boxen */
-    width: 150px; 
-    height: 308px; 
-    margin-right: 10px; 
-    background-color: #f0f0f0;
-    border: 2px solid steelblue;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 150px; /* Breite der Boxen */
+    height: 308px; /* Höhe der Boxen */
+    margin-right: 10px; /* Abstand zwischen den Boxen */
+    background-color: #f0f0f0; /* Hintergrundfarbe für die Boxen */
+    border: 2px solid steelblue; /* Rahmen hinzufügen */
+    border-radius: 5px; /* Abgerundete Ecken */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Schatten hinzufügen */
     transition: transform 0.2s; /* Übergangseffekt für Hover */
     margin: 50px 10px;
 }
-/* Vergrößerungseffekt bei Hover */
+
 .grid-item2:hover {
-    transform: scale(1.05); 
-}
-/* Darstellungseintellung des projekte-boxen bilder*/
-.grid-item2 img {
-    width: 100%;
-    height: 100%;
+    transform: scale(1.05); /* Vergrößerungseffekt bei Hover */
 }
 
-/* Darstellungseintellung der Trennungslinie */
+.grid-item2 img {
+    width: 100%; /* Breite des Bildes */
+    height: 100%; /* Höhe des Bildes */
+    object-fit: cover; /* Bildabdeckung */
+}
+
+
+/*
+test
+*/
+
 hr {
     border-top: 0.5rem solid steelblue;
     margin-bottom: 1rem;
     margin-top: 80px;
 }
 
-/* Darstellungseintellung der Trennungslinie */
 .container {
-    padding-top: 2rem;
+    padding-top: 2rem; /* Platz für den fixierten Header */
+}
+
+.container {
     width: 100%;
     overflow: hidden;
 }
-/* Darstellungseintellung des contents */
+
 .content {
     display: flex;
     align-items: flex-start;
     padding: 10px;
     box-sizing: border-box;
 }
-/* Darstellungseintellung der content Blider */
 .content img {
     width: 150px;
     height: auto;
 }
-/* Darstellungseintellung des content p Element */
+
 .content p {
     flex: 1;
     padding: 0 20px;
     font-size: 1rem;
     text-align: left;
 }
-/* Darstellungseintellungen und verschiedene Auflösungen */
+
 @media screen and (max-width: 843px) and (orientation: portrait) {
     .image-grid {
         display: grid;
@@ -220,8 +366,8 @@ hr {
         padding-top: 127px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  @media screen and (max-width: 843px) and (orientation: landscape) {
+}
+@media screen and (max-width: 843px) and (orientation: landscape) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -230,8 +376,8 @@ hr {
         padding-top: 127px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  @media screen and (max-width: 130px) and (orientation: portrait) {
+}
+@media screen and (max-width: 130px) and (orientation: portrait) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -240,7 +386,7 @@ hr {
         padding-top: 149px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
+}
   @media screen and (max-width: 130px) and (orientation: landscape) {
     .image-grid {
         display: grid;
@@ -250,45 +396,4 @@ hr {
         padding-top: 149px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  /* Darstellungseintellung des Footers */
-  footer{
-    padding: 9rem 0 9rem;
-    background-color: #6baed6;
-    border-top: 1rem solid steelblue;
-  }
-
-/* Container für das Kontaktformular */
-.contactFormContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Stil für das Kontaktformular */
-  .contactForm {
-    max-width: 223px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px; /* Abstand zwischen den Feldern */
-  }
-  
-  .contactForm label,
-  .contactForm input,
-  .contactForm textarea {
-    margin: 0; /* Entfernt unnötige Lücken */
-    gap: 0px; /* Abstand zwischen den Feldern */
-  }
-  
-  #responseMessage {
-    color: #491b1b;
-    border-radius: 5px;
-    text-align: center;
-    transition: opacity 0.5s;
-    opacity: 1;
-  }
-  
-  #responseMessage.hidden {
-    opacity: 0;
-  }
+}

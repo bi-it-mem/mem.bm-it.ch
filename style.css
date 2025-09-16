@@ -270,7 +270,7 @@ hr {
 .contactFormContainer {
     display: flex;
     justify-content: center; /* Zentriert horizontal */
-  align-items: center;     /* Zentriert vertikal */
+    align-items: center;     /* Zentriert vertikal */
     gap: 20px; /* Abstand zwischen den Elementen */
     padding-top: 20px; /* Optional: Abstand nach oben */
   }

@@ -36,9 +36,9 @@ body {
 } 
 .site-content .foto3-1 {
     width: 40%;          /* Bild dynamisch: 40% vom Container */
-    max-width: 30rem;    /* hört bei 30rem auf */
+    max-width: 30rem;
     height: auto;
-    flex: 0 1 auto;      /* darf schrumpfen (nur für Flex wirksam) */
+    flex: 0 0 auto;      /* darf schrumpfen (nur für Flex wirksam) */
     padding: 0 10% 0 5%; 
 }
 
@@ -136,6 +136,10 @@ h1 {
 h2 {
     padding-top: 6.5rem;
 }
+/* oberer Abstand der Überschrift "Über mich" */
+h3 {
+    padding-top: 11.5rem;
+}
 /* Linker Abstand der Überschrift "Home" und "Über mich" */
 h1, h2, h3, h4 {
     padding-left: 1rem;
@@ -209,25 +213,6 @@ hr {
     width: 100%;
     overflow: hidden;
 }
-/* Darstellungseintellung des contents */
-.content {
-    display: flex;
-    align-items: flex-start;
-    padding: 10px;
-    box-sizing: border-box;
-}
-/* Darstellungseintellung der content Blider */
-.content img {
-    width: 150px;
-    height: auto;
-}
-/* Darstellungseintellung des content p Element */
-.content p {
-    flex: 1;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: left;
-}
 /* Darstellungseintellungen und verschiedene Auflösungen */
 @media screen and (max-width: 843px) and (orientation: portrait) {
     .image-grid {
@@ -238,8 +223,8 @@ hr {
         padding-top: 127px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  @media screen and (max-width: 843px) and (orientation: landscape) {
+}
+@media screen and (max-width: 843px) and (orientation: landscape) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -248,8 +233,8 @@ hr {
         padding-top: 127px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  @media screen and (max-width: 130px) and (orientation: portrait) {
+}
+@media screen and (max-width: 130px) and (orientation: portrait) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -258,8 +243,8 @@ hr {
         padding-top: 149px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  @media screen and (max-width: 130px) and (orientation: landscape) {
+}
+@media screen and (max-width: 130px) and (orientation: landscape) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -268,30 +253,14 @@ hr {
         padding-top: 149px; /* Platz für den fixierten Header */
         z-index: 10;
     }
-  }
-  /* Darstellungseintellung des Footers */
-  .site-footer{
+}
+/* Darstellungseintellung des Footers */
+.site-footer{
     height: 5rem;
     background-color: #6baed6;
     border-top: 1rem solid steelblue;
     margin-top: 80px;
 }
-
-/* Kontaktformular selbst */
-.contactForm {
-    display: flex;
-    flex-direction: column;  /* Elemente vertikal anordnen */
-    width: 222px;        /* Maximale Breite für das Formular */
-    border-radius: 8px;      /* Abgerundete Ecken */
-}
-
-.contactFormContainer {
-    display: flex;
-    justify-content: center; /* Zentriert horizontal */
-    align-items: center;     /* Zentriert vertikal */
-    gap: 20px; /* Abstand zwischen den Elementen */
-    padding-top: 20px; /* Optional: Abstand nach oben */
-  }
 
 .footer-links a {
     padding-top: 20px;

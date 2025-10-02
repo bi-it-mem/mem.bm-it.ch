@@ -1,0 +1,307 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Darstellungseintellung für Font */
+@font-face {
+    font-family: 'SourceSans3';
+    src: url('/Source_Sans_3/static/SourceSans3-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Darstellungseintellung Des Bodys */
+body {
+    background-color: white;
+    color: black;
+    max-width: 2110px;
+    min-width: 560px;
+    font-family: 'SourceSans3', sans-serif;
+    font-size: 1rem;
+    margin: auto;
+    hyphens: auto;
+}
+/* Darstellungseintellung der Header Tasten box */
+.button-container {
+    display: flex;
+    flex-direction: row;
+    background-color: steelblue;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    margin-top: 78px;
+}
+.site-content div { 
+    display: flex; 
+    justify-content: space-evenly; 
+    flex-direction: row;
+} 
+.site-content .foto3-1 {
+    width: 40%;          /* Bild dynamisch: 40% vom Container */
+    max-width: 30rem;    /* hört bei 30rem auf */
+    height: auto;
+    flex: 0 1 auto;      /* darf schrumpfen (nur für Flex wirksam) */
+    padding: 0 10% 0 5%; 
+}
+
+.site-content p { 
+    margin: auto; 
+    padding: 0; 
+    height: fit-content; 
+}
+
+/* Darstellungseintellung des Header Texts */
+.text {
+    margin: 0;
+    padding: 0 10px 5px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* Darstellungseintellung der Header links */
+.link {
+    padding: 0 10px 5px 10px;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* Darstellungseintellung der Header link::befores */
+.link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: black;
+}
+/* Darstellungseintellung der Header a Elemente */
+.site-header a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+/* Darstellungseintellung der Header p Elemente */
+.site-header p {
+    color: turquoise;
+    background-color: steelblue;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    font-weight: 700;
+}
+
+figure {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 0;
+    padding-top: 105px;
+    z-index: 10;
+}
+
+/* Darstellungseintellung der Header Bilder */
+.grid-item {
+    padding: 0;
+    margin: 0;
+}
+/* Darstellungseintellung der Header Bilder, Lieblings-Spiele bilder und Projekte blöcke */
+img {
+    width: 100%; /* Bilder nehmen 100% der Breite der Grid-Items ein */
+    height: auto; /* Proportionen des Bildes beibehalten */
+    display: block; /* Entfernt eventuelle Abstände unterhalb der Bilder */
+    margin: 0 auto; /* Zentriert das Bild */
+}
+/* Darstellungseintellung der header p Element */
+main p {
+    margin: 0;
+    padding: 10px 1rem 100px 1rem;
+}
+/* Darstellungseintellung nur des Seitentitels */
+h1 {
+    background-color: steelblue;
+    color: white;
+    padding: 1rem 0rem 2rem;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    margin: 0;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    z-index: 10; /* Höherer z-Index, um sicherzustellen, dass es oben bleibt */
+    text-wrap: nowrap;
+}
+/* oberer Abstand der Überschrift "Home" */
+h2 {
+    padding-top: 6.5rem;
+}
+/* Linker Abstand der Überschrift "Home" und "Über mich" */
+h1, h2, h3, h4 {
+    padding-left: 1rem;
+}
+/* Darstellungseintellung der Überschrift "Home" und "Über mich" und Projekte bibliothek*/
+h2, h3, h4 {
+    color: steelblue;
+    font-size: 80px;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    margin: 0;
+    padding-bottom: 80px;
+}
+/* oberer Abstand der Überschrift "Home" */
+h5 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0.1rem 0.5rem;
+    border-top: 0.5rem solid steelblue;
+    border-bottom: 0.5rem solid steelblue;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+
+.CV{
+    height: 900px;
+    width: 85%;
+}
+/* Darstellungseintellung des projekte-boxen container */
+.scroll-container {
+    overflow-x: auto; /* Horizontales Scrollen aktivieren */
+    overflow-y: hidden; /* Vertikales Scrollen verhindern */
+    white-space: nowrap; /* Verhindert Umbrüche */
+    height: auto; 
+    width: 100%; 
+    border: 1px solid #ccc; /* Rahmen für die Scrollbox */
+    padding: 0; 
+    box-sizing: border-box; /* Rahmen und Padding in der Breite einbeziehen  */
+}
+/* Darstellungseintellung des projekte-boxen */
+.grid-item2 {
+    display: inline-block; /* Inline-Block für die Boxen */
+    width: 150px; 
+    height: 308px; 
+    margin-right: 10px; 
+    background-color: #f0f0f0;
+    border: 2px solid steelblue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s; /* Übergangseffekt für Hover */
+    margin: 50px 10px;
+}
+/* Vergrößerungseffekt bei Hover */
+.grid-item2:hover {
+    transform: scale(1.05); 
+}
+/* Darstellungseintellung des projekte-boxen bilder*/
+.grid-item2 img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Darstellungseintellung der Trennungslinie */
+hr {
+    border-top: 0.5rem solid steelblue;
+    margin-bottom: 1rem;
+    margin-top: 80px;
+}
+
+/* Darstellungseintellung der Trennungslinie */
+.container {
+    padding-top: 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+/* Darstellungseintellung des contents */
+.content {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* Darstellungseintellung der content Blider */
+.content img {
+    width: 150px;
+    height: auto;
+}
+/* Darstellungseintellung des content p Element */
+.content p {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: left;
+}
+/* Darstellungseintellungen und verschiedene Auflösungen */
+@media screen and (max-width: 843px) and (orientation: portrait) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 127px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+  }
+  @media screen and (max-width: 843px) and (orientation: landscape) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 127px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+  }
+  @media screen and (max-width: 130px) and (orientation: portrait) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 149px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+  }
+  @media screen and (max-width: 130px) and (orientation: landscape) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
+        gap: 0; /* Kein Abstand zwischen den Bildern */
+        padding-top: 149px; /* Platz für den fixierten Header */
+        z-index: 10;
+    }
+  }
+  /* Darstellungseintellung des Footers */
+  .site-footer{
+    height: 5rem;
+    background-color: #6baed6;
+    border-top: 1rem solid steelblue;
+    margin-top: 80px;
+}
+
+/* Kontaktformular selbst */
+.contactForm {
+    display: flex;
+    flex-direction: column;  /* Elemente vertikal anordnen */
+    width: 222px;        /* Maximale Breite für das Formular */
+    border-radius: 8px;      /* Abgerundete Ecken */
+}
+
+.contactFormContainer {
+    display: flex;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center;     /* Zentriert vertikal */
+    gap: 20px; /* Abstand zwischen den Elementen */
+    padding-top: 20px; /* Optional: Abstand nach oben */
+  }
+
+.footer-links a {
+    padding-top: 20px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: white;
+    justify-content: center; /* Zentriert horizontal */
+    align-items: center;     /* Zentriert vertikal */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;     /* Hover-Effekt */
+}

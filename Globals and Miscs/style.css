@@ -17,9 +17,11 @@ body {
     font-family: 'SourceSans3', sans-serif;
     font-size: 1rem;
     margin: auto;
-    hyphens: auto;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+
+    /* für Sticky-Footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 /* Darstellungseintellung der Header Tasten box */
 .button-container {
@@ -295,7 +297,7 @@ hr {
     height: 5rem;
     background-color: #6baed6;
     border-top: 1rem solid steelblue;
-    margin-top: 80px;
+    margin-top: auto; /* statt 80px */
 }
 
 .footer-links a {

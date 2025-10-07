@@ -18,6 +18,8 @@ body {
     font-size: 1rem;
     margin: auto;
     hyphens: auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 /* Darstellungseintellung der Header Tasten box */
 .button-container {
@@ -244,6 +246,9 @@ hr {
 .Project_Links a{
     color: black;
 }
+.Project_Links p{
+    padding-bottom: 0%;
+}
 /* Darstellungseintellungen und verschiedene Auflösungen */
 @media screen and (max-width: 843px) and (orientation: portrait) {
     .image-grid {
@@ -298,8 +303,6 @@ hr {
     padding-left: 10px;
     text-decoration: none;
     color: white;
-    justify-content: center; /* Zentriert horizontal */
-    align-items: center;     /* Zentriert vertikal */
 }
 
 .footer-links a:hover {

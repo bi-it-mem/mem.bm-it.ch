@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt Rollout</title>
+
+    <link rel="stylesheet" href="/Globals and Miscs/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>CV-Webseite eines Lehrlings</h1>
+        <nav class="button-container">
+            <p class="text">Willkommen in meiner Webseite</p>
+            <a href="../index2_AboutMe.html" class="link">Über mich</a>
+            <a href="../index3_Projekte-Galerie.html" class="link">Projekte Galerie</a>
+        </nav>
+    </header>
+    
+    <main class="Project_Links">
+        <h2>Projekt Veyon</h2>
+        <p>In diesem Projekt ging es darum <a href="https://veyon.io/en/">Veyon</a> als Software zur Bildschirmüberwachung und -steuerung mit einem AD Struktur dahinter in unserem Schulungsraum einzuführen und so das alte system zu ersetzen. 
+            Die Software ermöglicht es Lehrpersonen, die Bildschirme der Schüler zu sehen und bei Bedarf zu steuern. Dies fördert eine bessere Lernumgebung und ermöglicht eine gezielte Unterstützung der Schüler.
+            Da <a href="https://veyon.io/en/">Veyon</a> ganz schön Neuland für uns alle war, hatten wir eine Testphase gemacht, um die Software zu evaluieren und sicherzustellen, dass sie unseren Anforderungen entspricht.
+            Dafür hatten wir in unserer <a href="https://www.proxmox.com/en/">Proxmox-Umgebung</a> eine Server VM eingerichtet. 
+            Da die Proxmox-Umgebung zur zeit noch ein globaler DHCP-Service hatte, musste ich nur ein DNS und ein AD-Service eingerichtet werden, in dem alle Test-Clients eingebunden wurden.
+            In der Lehrer VM wurde <a href="https://veyon.io/en/download/">Veyon mit Veyon Master</a> installiert und darin wurde der Raum sowie die rechte alle Lehrer und Schüler konfiguriert. 
+            dafür wurde in der AD zwei Gruppen, eine für die Lehrer und eine für die Schüler, kreiert um die einrichtung und Verwaltung zu vereinfachen. Nach erfolgreicher Testphase wurde Veyon im gesamten Schulungsraum implementiert.
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://github.com/bi-it-mem">Mein Github Repository</a>
+            <a href="mailto:martim.mena.251@gmail.com">Kontaktiere mich</a>
+        </div>
+    </footer>
+</body>
+</html>

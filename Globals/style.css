@@ -134,7 +134,7 @@ h1 {
 }
 /* oberer Abstand der Überschrift "Home" */
 h2 {
-    padding-top: 6.5rem;
+    padding-top: 11.5rem;
 }
 /* oberer Abstand der Überschrift "Über mich" */
 h3, h4 {
@@ -193,6 +193,17 @@ h5 {
     border: 1px solid #ccc; /* Rahmen für die Scrollbox */
     padding: 0; 
     box-sizing: border-box; /* Rahmen und Padding in der Breite einbeziehen  */
+
+}
+.grid-item2 a {
+    display: flex;
+    justify-content: center;   /* horizontal */
+    align-items: center;       /* vertikal   */
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 /* Darstellungseintellung des projekte-boxen */
 .grid-item2 {
@@ -229,6 +240,9 @@ hr {
     padding-top: 2rem;
     width: 100%;
     overflow: hidden;
+}
+.Project_Links a{
+    color: black;
 }
 /* Darstellungseintellungen und verschiedene Auflösungen */
 @media screen and (max-width: 843px) and (orientation: portrait) {

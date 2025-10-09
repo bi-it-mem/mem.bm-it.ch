@@ -13,7 +13,7 @@ body {
     background-color: white;
     color: black;
     max-width: 2110px;
-    min-width: 560px;
+    min-width: 570px;
     font-family: 'SourceSans3', sans-serif;
     font-size: 1rem;
     margin: auto;
@@ -27,29 +27,84 @@ body {
 .button-container {
     display: flex;
     flex-direction: row;
-    background-color: steelblue;
-    position: fixed;
     width: 100%;
     z-index: 10;
-    margin-top: 78px;
 }
-.site-content div { 
+.site-header .button-container {
+    /* basiert auf eigener Textgröße/Zeilenhöhe */
+    padding-block: 1.2lh;   /* oben/unten = 1 Zeilenhöhe */
+    padding-inline: 2lh; /* links/rechts = 2 Zeilenhöhe */ 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* Darstellungseintellung der Header a Elemente */
+.site-header a {
+    color: black;
+    text-decoration: none;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+}
+/* Darstellungseintellung der Header p Elemente */
+.site-header p {
+    color: black;
+    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
+    font-weight: 700;
+}
+.site-content {
+    flex: 1 0 auto; /* für Sticky-Footer */
+    display: flex; 
+    place-items: center;        /* horizontal + vertikal */
+    margin: auto;
+    width: 90%;        /* Breite des Inhalts */
+}
+.site-content, .bio-text, .bio-btn { 
     display: flex; 
     justify-content: space-evenly; 
     flex-direction: row;
-} 
+}
+.bio-text {
+    flex-direction: column;
+}
+.bio-btn {
+  display: flex;
+  justify-content: flex-start; /* links klebend */
+  gap: clamp(1rem, 3vw, 3rem); /* dynamischer Abstand (min–ideal–max) */
+
+}
+.bio-btn a{
+    /* Basis nutzt Variablen */
+    background:var(--bg); color:var(--fg); border:1px solid var(--bd);
+    display: grid;              /* statt flex */
+    place-items: center;        /* horizontal + vertikal */
+    inline-size: 140px;
+    block-size: 140px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+.bio-btn a:hover{ background: white; transition-duration: 300ms; }
+
+/* #eea302 #ff3b25 #ff3b25 */
+/* Zuordnung pro Kind (geht nicht in einer einzigen Deklaration) */
+.bio-btn a:nth-child(1){ --bg:#eea302; --bd:black; --fg:black; }
+.bio-btn a:nth-child(2){ --bg:#ff3b25; --bd:black; --fg:black; }
+.bio-btn a:nth-child(3){ --bg:#80D8DA; --bd:black; --fg:black; }
+
 .site-content .foto3-1 {
-    width: 40%;          /* Bild dynamisch: 40% vom Container */
-    max-width: 30rem;
+    width: 23%;          /* Bild dynamisch: 23% vom Container */
+    min-width: 320px; /* min. 320px breit */
+    min-height: 320px; /* min. 320px hoch */
+    max-width: 30rem;  /* max. 480px breit */
     height: auto;
     flex: 0 0 auto;      /* darf schrumpfen (nur für Flex wirksam) */
-    padding: 0 10% 0 5%; 
+    margin: 0 3% 0 5%; /* rechts 3% Abstand */
+    border-radius: 50%;
 }
 
 .site-content p { 
     margin: auto; 
     padding: 0; 
-    height: fit-content; 
+    height: fit-content;
+    margin-bottom: 5%;  
 }
 
 /* Darstellungseintellung des Header Texts */
@@ -77,19 +132,6 @@ body {
     bottom: 0;
     width: 1px;
     background-color: black;
-}
-/* Darstellungseintellung der Header a Elemente */
-.site-header a {
-    color: white;
-    text-decoration: none;
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-}
-/* Darstellungseintellung der Header p Elemente */
-.site-header p {
-    color: turquoise;
-    background-color: steelblue;
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-    font-weight: 700;
 }
 
 figure {
@@ -124,28 +166,11 @@ main p {
     padding: 10px 1rem 100px 1rem;
 }
 /* Darstellungseintellung nur des Seitentitels */
-h1 {
-    background-color: steelblue;
-    color: white;
-    padding: 1rem 0rem 2rem;
-    text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
-    margin: 0;
-    position: fixed;
-    top: 0; 
-    width: 100%;
-    z-index: 10; /* Höherer z-Index, um sicherzustellen, dass es oben bleibt */
-    text-wrap: nowrap;
-}
-/* oberer Abstand der Überschrift "Home" */
-h2 {
-    padding-top: 11.5rem;
-}
-/* oberer Abstand der Überschrift "Über mich" */
-h3, h4 {
+h2, h3, h4 {
     padding-top: 11.5rem;
 }
 /* Linker Abstand der Überschrift "Home" und "Über mich" */
-h1, h2, h3, h4 {
+h2, h3, h4 {
     padding-left: 1rem;
 }
 /* Darstellungseintellung der Überschrift "Home" und "Über mich" und Projekte bibliothek*/
@@ -252,47 +277,34 @@ hr {
 .Project_Links p{
     padding-bottom: 0%;
 }
-/* Darstellungseintellungen und verschiedene Auflösungen */
-@media screen and (max-width: 843px) and (orientation: portrait) {
-    .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
-        gap: 0; /* Kein Abstand zwischen den Bildern */
-        padding-top: 127px; /* Platz für den fixierten Header */
-        z-index: 10;
-    }
+@media screen and (max-width: 950px) and (orientation: portrait) {
+  .site-content { flex-direction: column; flex-wrap: nowrap; align-items: center; }
+  .bio-text { order: 1; width: min(70ch, 100%); }
+  .bio-btn  { order: 2; justify-content: center; flex-wrap: wrap; gap: clamp(.75rem, 2vw, 1.25rem); margin-bottom: 5%; }
+  .site-content .foto3-1 { order: 3; flex: 0 0 auto; margin-bottom: 5%; }
 }
-@media screen and (max-width: 843px) and (orientation: landscape) {
-    .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
-        gap: 0; /* Kein Abstand zwischen den Bildern */
-        padding-top: 127px; /* Platz für den fixierten Header */
-        z-index: 10;
-    }
+
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  .site-content { flex-wrap: wrap; }
+  .bio-text, .bio-btn { flex: 1 1 320px; }
+  .bio-btn { flex-wrap: wrap; gap: clamp(.75rem, 2vw, 1.25rem); }
+  .site-content .foto3-1 { flex: 0 0 auto; } /* Bild bleibt unverändert */
 }
-@media screen and (max-width: 130px) and (orientation: portrait) {
-    .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
-        gap: 0; /* Kein Abstand zwischen den Bildern */
-        padding-top: 149px; /* Platz für den fixierten Header */
-        z-index: 10;
-    }
+
+@media screen and (max-width: 580px) and (orientation: portrait) {
+  .site-content { flex-direction: column; flex-wrap: nowrap; align-items: center; }
+  .bio-text { order: 1; }
+  .bio-btn  { order: 2; flex-wrap: wrap; gap: .5rem; margin-bottom: 5%; }
+  .site-content .foto3-1 { order: 3; margin-bottom: 5%; }
 }
-@media screen and (max-width: 130px) and (orientation: landscape) {
-    .image-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: auto; /* Automatische Zeilenhöhe */
-        gap: 0; /* Kein Abstand zwischen den Bildern */
-        padding-top: 149px; /* Platz für den fixierten Header */
-        z-index: 10;
-    }
+
+@media screen and (max-width: 580px) and (orientation: landscape) {
+  .site-content { flex-wrap: wrap; }
+  .bio-text, .bio-btn { flex: 1 1 200px; }
+  .bio-btn { flex-wrap: wrap; gap: .5rem; }
+  .site-content .foto3-1 { flex: 0 0 auto; }
 }
+
 /* Darstellungseintellung des Footers */
 .site-footer{
     height: 5rem;

@@ -1,47 +1,107 @@
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Über Mich</title>
-        <meta name="description" content="Das war eine Webseite die ich während meiner Ausbildung gemacht habe. Diese Webseite wurde mit HTML5 und CSS3 am 12.02.24 gemacht.">
+<title>Über Mich</title>
+<meta name="description" content="Das war eine Webseite die ich während meiner Ausbildung gemacht habe. Diese Webseite wurde mit HTML5 und CSS3 am 12.02.24 gemacht.">
 
-        <link rel="stylesheet" href="Globals and Miscs/style.css">
-        <script src="Globals and Miscs/AboutMe_AgeUpdater.js" defer></script>
-        </head>
-        <body>
-            <header class="site-header">
-                <h1>CV-Webseite eines Lehrlings</h1>
-                <nav class="button-container">
-                    <p class="text">Willkommen in meiner Webseite</p>
-                    <a href="index.html" class="link">Home</a>
-                    <a href="index3_Projekte-Galerie.html" class="link">Projekte Galerie</a>
-                    <a href="#über_mich" class="link">Über mich</a>
-                </nav>
-            </header>
-            <main>
-                <!-- Einführungstext -->
-                <h3 id="über_mich">Über mich</h3>
-                <p> Hi! Mein Name ist Martim, ich bin 19 Jahre alt und begeistere mich für die Welt der ICT. 
-                    In den letzten Jahren habe ich vielseitige praktische Erfahrungen gesammelt – angefangen bei der Wartung und Betreuung von PCs über die Einrichtung und Pflege von Netzwerken bis hin zu ersten Schritten im Web Programming. 
-                    Besonders vertraut bin ich mit Windows-Server-Umgebungen, in denen ich mit Diensten wie DHCP, DNS, Active Directory, der Arbeit über die Kommandozeile sowie mit der Verwaltung von Print-Servern gearbeitet habe. Auch im allgemeinen Support konnte ich mein Wissen einbringen, etwa bei der Unterstützung von Anwendern oder beim Rollout neuer Systeme. 
-                    Dabei habe ich gelernt, strukturiert und lösungsorientiert vorzugehen und mich flexibel auf neue technische Anforderungen einzustellen.<br><br>Ich habe von Geburt an Spina bifida aperta, Hydrocephalus und gewisse Stehschwierigkeiten. Für längere Laufzeiten und den Transport schwerer Gewichte nutze ich einen Rollstuhl. 
-                    Zusätzlich muss ich katheterisieren.
-                </p>
-
-                <picture >
-                    <img src="/Images/Martim-4-1.svg" class="CV">
-                </picture>
-                <div class="CV_download">
-                    <a href="Images/CV/Martim-4.pdf" >Download Lebenslauf</a>
+<link rel="stylesheet" href="Globals and Miscs/style.css">
+<script src="Globals and Miscs/AboutMe_AgeUpdater.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="button-container">
+            <p class="text">Martim Lopes Mena</p>
+            <a href="index.html" class="link">Home</a>
+            <a href="index3_Projekte-Galerie.html" class="link">Projekte Galerie</a>
+            <a href="#über_mich" class="link">Über mich</a>
+        </nav>
+    </header>
+    <main class="site-content aboutme">
+        <div class="bio-text aboutme" id="über_mich">
+            <h1>Lebenslauf</h1>
+            <div class="CV-List_Grid1">
+                <h2>Berufserfahrung</h2>
+                <div class="CV-List_Grid2">
+                    <div class="CV-List_Grid1">
+                        <p class="CV-List_Date">08/2024 - Heute</p>
+                        <div class="Berufserfahrung_li">
+                            <b>Ausbildung zum ICT-Fachmann</b>
+                            <p>"Lorem ipsum dolor sit amet."</p>
+                        </div>
+                    </div>
+                    <hr class="Double_LineBreak">
+                    <div class="CV-List_Grid1">
+                        <p class="CV-List_Date">09/2023 - 08/2024</p>
+                        <div class="Berufserfahrung_li">
+                            <b>Gezielte Vorbereitung für die Ausbildung zum ICT-Fachmann</b>
+                            <p>"Lorem ipsum dolor sit amet."</p>
+                        </div>
+                    </div>
                 </div>
-            </main>
-            <footer class="site-footer">
-                <div class="footer-links">
-                    <a href="https://github.com/bi-it-mem/mem.bm-it.ch">Mein Github</a>
-                    <a href="mailto:martim.mena.251@gmail.com">Kontaktiere Mich</a>
+            </div>
+            <hr class="Double_LineBreak_Spacer">
+            <div class="CV-List_Grid1">
+				<h2>Bildung</h2>
+                <div class="CV-List_Grid2">
+                    <div class="CV-List_Grid1">
+                        <p class="CV-List_Date">08/2024 - Heute</p>
+                        <div class="Bildung_li">
+                            <b>ICT-Fachmann Lehre</b>
+                            <p>"Lorem ipsum dolor sit amet."</p>
+                        </div>
+                    </div>
+                    <hr class="Double_LineBreak">
+                    <div class="CV-List_Grid1">
+                        <p class="CV-List_Date">2021 - 2023</p>
+                        <div class="Bildung_li">
+                            <b>Brückenangebot</b>
+                            <p>"Lorem ipsum dolor sit amet."</p>
+                        </div>
+                    </div>
+                    <hr class="Double_LineBreak">
+                    <div class="CV-List_Grid1">
+                        <p class="CV-List_Date">2013 - 2021</p>
+                        <div class="Bildung_li">
+                            <b>Obligatorische Schulzeit.</b>
+                            <p>"Lorem ipsum dolor sit amet."</p>
+                        </div>
+                    </div>
+                    <hr class="Double_LineBreak">
                 </div>
-            </footer>
-        </body>
-        </html>
+			</div>
+            <hr class="Double_LineBreak_Spacer">
+            <div class="CV-List_Grid1">
+				<h2>Fachwissen</h2>
+                <div class="CV-List_Grid2">
+                    <ul class="Bildung_li">
+                        <li>Entgegennahme von Störungsmeldungen und Betreuung von Kundinnen und Kunden im Bereich von 1st-Level-Support im Microsoft Umfeld.</li>
+                        <li>Installation und Konfiguration von physische und Virtuelle Clients mit Windows 10/11 und Ubuntu-Linux.</li>
+                        <li>Installation und Konfiguration von physische und Virtuelle Server mit Windows Server auf Basis von Microsoft Server 2019.</li>
+                        <li>Virtualisierung von Clients und Servern mit VMware und Proxmox.</li>
+                        <li>Scripting mit Bash.</li>
+                        <li>Konfiguration von Netzwerkkomponenten und Inbetriebnahme von Kleinen Netzwerken.</li>
+                        <li>Unterhalt der IT-Werkstatt.</li>
+                        <li>Dokumentation von Prozessen und Arbeitsabläufen sowie Erstellung von Benutzeranleitungen.</li>
+                        <li>Mitarbeit in einem Projekt-Team.</li>
+                        <li>Erstellen von Webseiten mit HTML, CSS und JS.</li>
+                    </ul>
+                </div>
+			</div>
+        </div>
+    </main>
+    <main>
+        <div class="CV_download">
+            <a href="Images/CV/Martim-4.pdf" >Download Lebenslauf</a>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://github.com/bi-it-mem/mem.bm-it.ch">Mein Github</a>
+            <a href="mailto:martim.mena.251@gmail.com">Kontaktiere Mich</a>
+        </div>
+    </footer>
+</body>
+</html>

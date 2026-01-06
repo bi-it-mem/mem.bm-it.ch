@@ -8,19 +8,19 @@
 <meta name="description" content="Das war eine Webseite die ich während meiner Ausbildung gemacht habe. Diese Webseite wurde mit HTML5 und CSS3 am 12.02.24 gemacht.">
 
 <link rel="stylesheet" href="Globals and Miscs/style.css">
-<script src="Globals and Miscs/AboutMe_AgeUpdater.js" defer></script>
+<!--<script src="Globals and Miscs/AboutMe_AgeUpdater.js" defer></script>-->
 </head>
 <body>
     <header class="site-header">
         <nav class="button-container">
-            <p class="text">Martim Lopes Mena</p>
-            <a href="index.html" class="link">Home</a>
-            <a href="index3_Projekte-Galerie.html" class="link">Projekte Galerie</a>
-            <a href="#über_mich" class="link">Über mich</a>
+            <a href="index.html" class="text">Martim Lopes Mena</a>
+            <a href="#über_mich" class="Header-link Current-Page">Über mich</a>
+            <a href="index3_Projekte-Galerie.html" class="Header-link">Projekte Galerie</a>
+            <a href="mailto:martim.mena.251@gmail.com" class="Header-link">Kontaktiere Mich</a>
         </nav>
     </header>
     <main class="site-content aboutme">
-        <div class="bio-text aboutme" id="über_mich">
+        <div class="bio-text aboutme">
             <h1>Lebenslauf</h1>
             <div class="CV-List_Grid1">
                 <h2>Berufserfahrung</h2>
@@ -36,7 +36,7 @@
                     <div class="CV-List_Grid1">
                         <p class="CV-List_Date">09/2023 - 08/2024</p>
                         <div class="Berufserfahrung_li">
-                            <b>Gezielte Vorbereitung für die Ausbildung zum ICT-Fachmann</b>
+                            <b>Gezielte Vorbereitung für die <span class="mobile-wordbreak"></span> Ausbildung zum ICT-Fachmann</b>
                             <p>"Lorem ipsum dolor sit amet."</p>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                     <div class="CV-List_Grid1">
                         <p class="CV-List_Date">2021 - 2023</p>
                         <div class="Bildung_li">
-                            <b>Brückenangebot</b>
+                            <b>Brücken<wbr>angebot</b>
                             <p>"Lorem ipsum dolor sit amet."</p>
                         </div>
                     </div>
@@ -75,20 +75,18 @@
             <hr class="Double_LineBreak_Spacer">
             <div class="CV-List_Grid1">
 				<h2>Fachwissen</h2>
-                <div class="CV-List_Grid2">
-                    <ul class="Bildung_li">
-                        <li>Entgegennahme von Störungsmeldungen und Betreuung von Kundinnen und Kunden im Bereich von 1st-Level-Support im Microsoft Umfeld.</li>
-                        <li>Installation und Konfiguration von physische und Virtuelle Clients mit Windows 10/11 und Ubuntu-Linux.</li>
-                        <li>Installation und Konfiguration von physische und Virtuelle Server mit Windows Server auf Basis von Microsoft Server 2019.</li>
-                        <li>Virtualisierung von Clients und Servern mit VMware und Proxmox.</li>
-                        <li>Scripting mit Bash.</li>
-                        <li>Konfiguration von Netzwerkkomponenten und Inbetriebnahme von Kleinen Netzwerken.</li>
-                        <li>Unterhalt der IT-Werkstatt.</li>
-                        <li>Dokumentation von Prozessen und Arbeitsabläufen sowie Erstellung von Benutzeranleitungen.</li>
-                        <li>Mitarbeit in einem Projekt-Team.</li>
-                        <li>Erstellen von Webseiten mit HTML, CSS und JS.</li>
-                    </ul>
-                </div>
+                <ul class="Bildung_li">
+                    <li>Entgegennahme von Störungsmeldungen und Betreuung von Kundinnen und Kunden im Bereich von 1st-Level-Support im Microsoft Umfeld.</li>
+                    <li>Installation und Konfiguration von physische und Virtuelle Clients mit Windows 10/11 und Ubuntu-Linux.</li>
+                    <li>Installation und Konfiguration von physische und Virtuelle Server mit Windows Server auf Basis von Microsoft Server 2019.</li>
+                    <li>Virtualisierung von Clients und Servern mit VMware und Proxmox.</li>
+                    <li>Scripting mit Bash.</li>
+                    <li>Konfiguration von Netzwerkkomponenten und Inbetriebnahme von Kleinen Netzwerken.</li>
+                    <li>Unterhalt der IT-Werkstatt.</li>
+                    <li>Dokumentation von Prozessen und Arbeitsabläufen sowie Erstellung von Benutzeranleitungen.</li>
+                    <li>Mitarbeit in einem Projekt-Team.</li>
+                    <li>Erstellen von Webseiten mit HTML, CSS und JS.</li>
+                </ul>
 			</div>
         </div>
     </main>

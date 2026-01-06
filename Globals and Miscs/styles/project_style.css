@@ -1,0 +1,14 @@
+.project-text {
+    padding-right: 20px;
+}
+.Veyon-image {
+    padding: 5px;
+    border: black solid 1px;
+    width: 302px;
+}
+.Rollout-image {
+    width: 307px;
+}
+.projects-imgs.project-gallery {
+    justify-self: end;
+}

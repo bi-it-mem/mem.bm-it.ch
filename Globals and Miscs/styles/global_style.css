@@ -60,58 +60,7 @@ body {
 .site-content.home, .site-content.project-gallery {
     width: 90%;        /* Breite des Inhalts */
 }
-.bio-text.project-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
 
-.project-text[open] summary p { display: none; }
-
-}
-.site-content.aboutme {
-    width: 60%;        /* Breite des Inhalts */
-}
-
-.bio-btn {
-    display:flex;
-    justify-content:flex-start;
-    flex-wrap:wrap;
-    margin: 5% 0;                       /* oben/unten 5%, links/rechts 0 */
-    /* vorher: gap: clamp(1rem, 3vw, 3rem); */
-    column-gap: clamp(1rem, 3vw, 3rem); /* horizontal dynamisch */
-    row-gap: .5rem;                     /* vertikal klein & fix */
-    align-content:flex-start;           /* Zeilen nicht strecken */
-    flex: 0 1 auto;                     /* nicht in die Höhe wachsen */
-}
-.bio-btn a {
-    /* Basis nutzt Variablen */
-    background:var(--bg); color:var(--fg); border:1px solid var(--bd);
-    display: grid;          /* statt flex */
-    place-items: center;    /* horizontal + vertikal */
-    inline-size: 140px;
-    block-size: 140px;
-    border-radius: 50%;
-    text-decoration: none;
-    font-weight: bold;
-}
-.bio-btn a:hover { background: white; transition-duration: 300ms; }
-
-/* farben kinder #eea302 #ff3b25 #ff3b25 */
-/* Zuordnung pro Kind */
-.bio-btn a:nth-child(1) { --bg:#eea302; --bd:black; --fg:black; }
-.bio-btn a:nth-child(2) { --bg:#ff3b25; --bd:black; --fg:black; }
-.bio-btn a:nth-child(3) { --bg:#80D8DA; --bd:black; --fg:black; }
-
-.site-content.home .foto3-1 {
-    width: 23%;         /* Bild dynamisch: 23% vom Container */
-    min-width: 320px;   /* min. 320px breit */
-    min-height: 320px;  /* min. 320px hoch */
-    max-width: 30rem;   /* max. 480px breit */
-    height: auto;
-    flex: 0 0 auto;
-    margin: 0 3% 5% 5%;  /* rechts 3% Abstand unten/links 5% Abstand*/
-    border-radius: 50%;
-}
 .site-content p { 
     margin: auto; 
     padding: 0; 
@@ -123,18 +72,6 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-}
-.project-text {
-    padding-right: 20px;
-}
-
-.Veyon-image {
-    padding: 5px;
-    border: black solid 1px;
-    width: 302px;
-}
-.Rollout-image {
-    width: 307px;
 }
 /* Darstellungseintellung der Header links */
 .Header-link {
@@ -169,43 +106,14 @@ main p {
     margin: 0;
     padding: 10px 1rem 100px 1rem;
 }
-
 /* Darstellungseintellung der Überschrift "Home" und "Über mich" und Projekte bibliothek*/
 h2 {
     font-size: 20px;
 }
-.CV_download {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 80px;
-}
-
-.CV_download a {
-  text-decoration: none;
-  border: 1rem solid steelblue;
-  border-radius: 5%;
-  background-color: steelblue;
-  padding: 0px 10px;
-  color: white;
-}
-.CV_download a:hover {
-    box-shadow: 0 0 5px black;
-}
-
 .CV-List_Grid1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.CV-List_Grid1.aboutme {
-    display: flex;
-    flex-direction: row;
-}
-
-.projects-imgs.project-gallery {
-    justify-self: end;
-}
-
 /* Datum oben rechts mit Abstand zur "Wand" */
 .CV-List_Grid1 .CV-List_Date {
     align-self: start;
@@ -214,14 +122,6 @@ h2 {
     padding-right: 10%;  /* Abstand zur rechten Grid-Wand */
     width: auto;         /* KEIN 100% hier nötig (oft hinderlich) */
 }
-.Bildung_li li {
-    margin-bottom: 1rem;
-}
-.CV-List_Grid2 {
-    display: grid;
-    grid-template-rows: 1fr;
-}
-
 .Double_LineBreak {
     display: block;
     margin-bottom: 2rem;
@@ -239,7 +139,7 @@ h2 {
 
     .site-content   { flex-direction: column; flex-wrap: nowrap; align-items: center; }
     .bio-text.home  { order: 1; width: min(70ch, 100%); }
-    .site-content .foto3-1 { order: 2; flex: 0 0 auto; }
+    .site-content .foto3-1 { order: 2; flex: 0 0 auto; margin-bottom: 5%; }
     .bio-btn { 
         order: 2; 
         justify-content: center; 
@@ -258,21 +158,19 @@ h2 {
 
 @media screen and (max-width: 610px) {
     .CV-List_Grid2, .CV-List_Grid1, 
-    .CV-List_Grid1.project-gallery { grid-template-columns: 1fr; justify-items: center;}
-
-    .CV-List_Grid1.project-gallery {
-    grid-template-columns: 1fr; max-width: 307px; }
+    .CV-List_Grid1.project-gallery { grid-template-columns: 1fr; }
 
     .CV-List_Grid2 .CV-List_Grid1 .CV-List_Date { justify-self: start; padding-right: 0;}
 
     .bio-text.project-gallery { justify-items: center; }
-    .project-text { padding-right: 0px; padding-bottom: 5%;}
 
     .CV-List_Grid1 h2 { margin-bottom: 1rem; }
     /* b und p umbrechen */
-    .CV-List_Grid1 b, .CV-List_Grid1 p, .CV-List_Grid1 a { word-wrap: break-word; overflow-wrap: anywhere; } 
-
-    .mobile-wordbreak::after { content: "\A"; white-space: pre; }
+    .CV-List_Grid1 b,
+    .CV-List_Grid1 p {
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }    
 }
 /* Darstellungseintellung des Footers */
 .site-footer {

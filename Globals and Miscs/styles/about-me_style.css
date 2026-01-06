@@ -1,0 +1,35 @@
+.site-content.aboutme {
+    width: 60%;        /* Breite des Inhalts */
+}
+.projects-imgs.aboutme {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.CV-List_Grid1.aboutme {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+.CV_download {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 80px;
+}
+
+.CV_download a {
+  text-decoration: none;
+  border: 1rem solid steelblue;
+  border-radius: 5%;
+  background-color: steelblue;
+  padding: 0px 10px;
+  color: white;
+}
+.CV_download a:hover {
+    box-shadow: 0 0 5px black;
+}
+.Bildung_li li {
+    margin-bottom: 1rem;
+}

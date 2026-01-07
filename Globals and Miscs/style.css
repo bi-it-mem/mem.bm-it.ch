@@ -23,20 +23,15 @@ body {
     display: flex;
     flex-direction: column;
 }
-/* Darstellungseintellung der Header Tasten box */
-.button-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    z-index: 10;
-}
 .site-header .button-container {
-    /* basiert auf eigener Textgröße/Zeilenhöhe */
-    padding-block: 1.2lh;   /* oben/unten = 1 Zeilenhöhe */
+    /* basiert auf eigener Textgrösse/Zeilenhöhe */
+    padding-block: 1.2lh;   /* oben/unten = 1.2 Zeilenhöhe */
     padding-inline: 2lh;    /* links/rechts = 2 Zeilenhöhe */ 
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-direction: row;
+    z-index: 10;
 }
 /* Darstellungseintellung der Header a Elemente */
 .site-header a {
@@ -46,30 +41,41 @@ body {
     font-weight: 599;
 }
 /* Darstellungseintellung der Header p Elemente */
-.site-header .text {
+.site-header .Header-Text {
     color: black;
     text-shadow: 2px 4px 4px rgba(0, 51, 102, 0.3);
     font-size: 21px;
     font-weight: bold;
+    padding: 0 10px 5px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
+
 .site-content {
     display: flex; 
-    place-items: center;        /* horizontal + vertikal */
+    place-items: center;    /* horizontal + vertikal */
     margin: auto;
 }
 .site-content.home, .site-content.project-gallery {
-    width: 90%;        /* Breite des Inhalts */
+    width: 90%;
 }
 .bio-text.project-gallery {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-
-.project-text[open] summary p { display: none; }
-
 }
+
+.project-text summary  {
+    margin: 0;
+    padding: 1rem 0px 0px 0px;
+}
+.project-text[open] p.Footer-SummaryOpen {
+  padding-bottom: 2rem;
+}
+
 .site-content.aboutme {
-    width: 60%;        /* Breite des Inhalts */
+    width: 60%;
 }
 
 .bio-btn {
@@ -78,15 +84,15 @@ body {
     flex-wrap:wrap;
     margin: 5% 0;                       /* oben/unten 5%, links/rechts 0 */
     /* vorher: gap: clamp(1rem, 3vw, 3rem); */
-    column-gap: clamp(1rem, 3vw, 3rem); /* horizontal dynamisch */
-    row-gap: .5rem;                     /* vertikal klein & fix */
+    column-gap: clamp(1rem, 3vw, 3rem); /* horizontal Schrittweise dynamisch */
+    row-gap: 0.5rem;                     /* vertikal klein & fix */
     align-content:flex-start;           /* Zeilen nicht strecken */
     flex: 0 1 auto;                     /* nicht in die Höhe wachsen */
 }
 .bio-btn a {
     /* Basis nutzt Variablen */
     background:var(--bg); color:var(--fg); border:1px solid var(--bd);
-    display: grid;          /* statt flex */
+    display: grid;
     place-items: center;    /* horizontal + vertikal */
     inline-size: 140px;
     block-size: 140px;
@@ -96,7 +102,7 @@ body {
 }
 .bio-btn a:hover { background: white; transition-duration: 300ms; }
 
-/* farben kinder #eea302 #ff3b25 #ff3b25 */
+/* farben kinder: #eea302, #ff3b25, #80D8DA */
 /* Zuordnung pro Kind */
 .bio-btn a:nth-child(1) { --bg:#eea302; --bd:black; --fg:black; }
 .bio-btn a:nth-child(2) { --bg:#ff3b25; --bd:black; --fg:black; }
@@ -104,8 +110,8 @@ body {
 
 .site-content.home .foto3-1 {
     width: 23%;         /* Bild dynamisch: 23% vom Container */
-    min-width: 320px;   /* min. 320px breit */
-    min-height: 320px;  /* min. 320px hoch */
+    min-width: 320px;
+    min-height: 320px;
     max-width: 30rem;   /* max. 480px breit */
     height: auto;
     flex: 0 0 auto;
@@ -117,14 +123,8 @@ body {
     padding: 0; 
     height: fit-content;
 }
-/* Darstellungseintellung des Header Texts */
-.text {
-    padding: 0 10px 5px 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.project-text {
+
+.CV-List_Grid1.project-gallery div {
     padding-right: 20px;
 }
 
@@ -217,15 +217,7 @@ h2 {
 .Bildung_li li {
     margin-bottom: 1rem;
 }
-.CV-List_Grid2 {
-    display: grid;
-    grid-template-rows: 1fr;
-}
 
-.Double_LineBreak {
-    display: block;
-    margin-bottom: 2rem;
-}
 .Double_LineBreak_Spacer {
     display: block;
     margin: 2rem 0;
@@ -258,7 +250,7 @@ h2 {
 
 @media screen and (max-width: 610px) {
     .CV-List_Grid2, .CV-List_Grid1, 
-    .CV-List_Grid1.project-gallery { grid-template-columns: 1fr; justify-items: center;}
+    .CV-List_Grid1.project-gallery { grid-template-columns: 1fr; justify-items: start;}
 
     .CV-List_Grid1.project-gallery {
     grid-template-columns: 1fr; max-width: 307px; }
@@ -273,6 +265,11 @@ h2 {
     .CV-List_Grid1 b, .CV-List_Grid1 p, .CV-List_Grid1 a { word-wrap: break-word; overflow-wrap: anywhere; } 
 
     .mobile-wordbreak::after { content: "\A"; white-space: pre; }
+
+h2, h1 {
+    justify-self: center;
+    text-align: center;
+  }
 }
 /* Darstellungseintellung des Footers */
 .site-footer {

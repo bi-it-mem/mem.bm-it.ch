@@ -13,7 +13,7 @@
 <body>
     <header class="site-header">
         <nav class="button-container">
-            <a href="index.html" class="text">Martim Lopes Mena</a>
+            <a href="index.html" class="Header-Text">Martim Lopes Mena</a>
             <a href="index2_AboutMe.html" class="Header-link ">Über mich</a>
             <a href="index3_Projekte-Galerie.html" class="Header-link Current-Page">Projekte Galerie</a>
             <a href="mailto:martim.mena.251@gmail.com" class="Header-link">Kontaktiere Mich</a>
@@ -23,52 +23,50 @@
         <div class="bio-text project-gallery">
             <h1>Projekte Galerie</h1>
             <div class="CV-List_Grid1 project-gallery">
-                <details class="project-text">
-                    <summary>
-                        <b>Rollout von Windows 10 zu Windows 11</b>
-                        <p> Migration aller CLIs (PCS und Laptops) der Espas-Standorte von Windows 10 auf Windows 11.
-                            Umsetzung über Highsystem inkl. Updates, Applikationskonfiguration und User-Support.
-                            Über 400 CLIs erfolgreich migriert.
-                        </p>
-                    </summary>
-                    <p> In diesem Projekt ging es darum alle CLIs (PCS und Laptops) aller Espas Standorte auf Windows 11 zu migrieren.
-                        Dabei wurde mittels Highsystem Abteilungspakete zum jeweiligen bereiteten CLI geschickt und der CLI wurde neugestartet um das Paket in Gang zu setzen.
-                        Dafür ist jeder CLI im Highsystem eingetragen. Nebenbei wurden UEFI-Updates, HP Firmware-Updates via HP Image Assistant gemacht sowie Anwendungen neu installiert und konfiguriert.
-                        Bei Fragen bezüglich neuem Windows 11 haben wir die User unterstützt. Insgesamt wurden 400+ CLIs erfolgreich migriert.
+                <div>
+                    <b>Rollout von Windows 10 zu Windows 11</b>
+                    <p> Migration aller CLIs (PCs und Laptops) der Espas-Standorte von Windows 10 auf Windows 11.
+                        Umsetzung über Highsystem inkl. Updates, Applikationskonfiguration und User-Support.
+                        Über 400+ CLIs erfolgreich migriert.
                     </p>
-                </details>
+                    <details class="project-text">
+                        <summary>
+                            <b>Details</b>
+                        </summary>
+                        <p> In diesem Projekt ging es darum alle CLIs (PCs und Laptops) aller Espas Standorte auf Windows 11 zu migrieren.
+                            Dabei wurde mittels Highsystem Abteilungspakete zum jeweiligen vorbereiteten CLI geschickt und der CLI wurde neugestartet um das Paket in Gang zu setzen.
+                            Dafür ist jeder CLI im Highsystem eingetragen. Nebenbei wurden UEFI-Updates, HP Firmware-Updates via HP Image Assistant gemacht sowie Anwendungen neu installiert und konfiguriert.
+                            Bei Fragen bezüglich neuem Windows 11 haben wir die User unterstützt. Insgesamt wurden 400+ CLIs erfolgreich migriert.
+                        </p>
+                    </details>
+                </div>
                 <picture class="projects-imgs project-gallery">
-                    <img class="Rollout-image" src="Images\projekte\win-10-to-11-graphic.png" alt="Rollout">
+                    <img class="Rollout-image" src="Images\projekte\win-10-to-11-graphic.png" alt="Windows 11 Rollout">
                 </picture>
             </div>
             <hr class="Double_LineBreak_Spacer">
             <div class="CV-List_Grid1 project-gallery">
-                <details class="project-text">
+                <div>
+                    <b>Veyon</b>
+                    <p>
+                        Einführung von Veyon im Schulungsraum (AD-gestützt) als Ersatz des alten Systems.
+                        Einrichtung der Server/Clients, Gruppen und Rechte, Testphase, danach Rollout (Demnächst in Betrieb).
+                    </p>
+                    <details class="project-text">
                     <summary>
-                        <b>Veyon</b>
-                        <p>
-                            Einführung von Veyon im Schulungsraum (AD-gestützt) als Ersatz des alten Systems.
-                            Einrichtung der Server/Clients, Gruppen und Rechte, Testphase, danach Rollout (Demnächst in Betrieb).
-                        </p>
+                        <b>Details</b>
                     </summary>
-                    <p> In diesem Projekt ging es darum Veyon als Software zur Bildschirmüberwachung und -steuerung mit einem AD Struktur dahinter in unserem Schulungsraum einzuführen und so das alte system zu ersetzen.
-                        Die Software ermöglicht es Lehrpersonen, die Bildschirme der Schüler zu sehen und bei Bedarf zu steuern. Dies fördert eine bessere Lernumgebung und ermöglicht eine gezielte Unterstützung der Schüler.
-                        Da Veyon ganz schön Neuland für uns alle war, hatten wir eine Testphase gemacht, um die Software zu evaluieren und sicherzustellen, dass sie unseren Anforderungen entspricht.
-                        Dafür hatten wir in unserer Proxmox-Umgebung eine Server VM eingerichtet.
-                        Da die Proxmox-Umgebung zur zeit noch ein globaler DHCP-Service hatte, musste ich nur ein DNS und ein AD-Service eingerichtet werden, in dem alle Test-Clients eingebunden wurden.
-                        In der Lehrer VM wurde Veyon mit Veyon Master installiert und darin wurde der Raum sowie die rechte alle Lehrer und Schüler konfiguriert.
-                        dafür wurde in der AD zwei Gruppen, eine für die Lehrer und eine für die Schüler, kreiert um die einrichtung und Verwaltung zu vereinfachen. Nach erfolgreicher Testphase wurde Veyon im gesamten Schulungsraum implementiert.
+                    <p class="Footer-SummaryOpen"> In diesem Projekt wird Veyon als Software zur Bildschirmüberwachung und -steuerung im Schulungsraum betrieben und das bisherige System schrittweise ersetzt.
+                        Zur Evaluation wurde eine Testphase durchgeführt, in der in der Proxmox-Umgebung eine Server-VM mit DNS- und AD-Struktur eingerichtet und Test-Clients eingebunden wurden.
+                        In der Lehrer-VM wurde Veyon Master installiert sowie Räume und Berechtigungen für Lehrpersonen und Schüler über AD-Gruppen konfiguriert.
+                        Der Betrieb dient der Bewertung der Praxistauglichkeit und der Vorbereitung einer möglichen späteren Einführung.
                     </p>
                 </details>
+                </div>
                 <picture class="projects-imgs project-gallery">
                     <img class="Veyon-image" src="Images\Projekte\Veyon-logo.png" alt="Veyon">
                 </picture>
             </div>
-        </div>
-    </main>
-    <main>
-        <div class="CV_download">
-            <a href="Images/CV/Martim-4.pdf" >Download Lebenslauf</a>
         </div>
     </main>
     <footer class="site-footer">
